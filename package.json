@@ -1,0 +1,24 @@
+{
+  "name": "optic-landing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OPTIC landing page Next.js implementation workspace.",
+  "packageManager": "pnpm@9.0.6",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "pnpm run typecheck",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,319 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(234, 88, 12, 0.22);
+}
+
+.optic-mobile-only {
+  display: none;
+}
+
+@keyframes ldt-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ldt-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes ldt-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes ldt-pulse {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes ldt-payload-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(56px);
+  }
+}
+
+@keyframes ldt-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ldt-stamp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5) rotate(-12deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(-12deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(-12deg);
+  }
+}
+
+@keyframes ldt-progress {
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  [data-optic-variant] section > div,
+  [data-optic-variant] footer > div {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .optic-nav-inner {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .optic-hero-copy h1 {
+    font-size: clamp(56px, 9vw, 84px) !important;
+  }
+
+  section#problems > div > div:first-child,
+  section#products > div > div:first-child,
+  section#metrics > div > div {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  section#flow > div > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .optic-feature-pair {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  [data-optic-variant] {
+    overflow-x: hidden;
+  }
+
+  [data-optic-variant] section > div,
+  [data-optic-variant] footer > div {
+    padding: 72px 20px !important;
+  }
+
+  .optic-nav-inner {
+    height: auto !important;
+    min-height: 64px;
+    padding: 12px 20px !important;
+    gap: 16px !important;
+    flex-wrap: wrap;
+  }
+
+  .optic-nav-inner nav {
+    order: 3;
+    width: 100%;
+    gap: 18px !important;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .optic-nav-actions {
+    margin-left: auto;
+  }
+
+  .optic-hero-inner {
+    padding-top: 72px !important;
+    padding-bottom: 84px !important;
+  }
+
+  .optic-hero-copy {
+    margin-bottom: 44px !important;
+  }
+
+  .optic-hero-copy h1,
+  section h2 {
+    font-size: clamp(38px, 11vw, 54px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .optic-hero-copy p {
+    font-size: 16px !important;
+  }
+
+  .optic-hero-annotation {
+    position: static !important;
+    display: inline-flex !important;
+    margin: 0 12px 12px 0;
+  }
+
+  .optic-live-badge {
+    position: static !important;
+    transform: none !important;
+    justify-content: center;
+    margin: 14px auto 0;
+    width: fit-content;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  section#problems > div > div:nth-child(2),
+  section#products > div > div:nth-child(2),
+  section#flow svg {
+    overflow-x: auto !important;
+  }
+
+  section#problems > div > div:nth-child(2) > div,
+  section#products > div > div:nth-child(2),
+  section#flow svg {
+    min-width: 720px;
+  }
+
+  section#flow > div > div:nth-child(2) {
+    overflow-x: auto;
+  }
+
+  section#flow > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  section#flow > div > div:last-child > div {
+    border-right: 0 !important;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .optic-feature-stats {
+    flex-wrap: wrap;
+    gap: 24px !important;
+  }
+
+  section#metrics > div > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  footer > div > div:first-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  footer > div > div:last-child {
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .optic-live-demo {
+    min-width: 980px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  [data-optic-variant] section > div,
+  [data-optic-variant] footer > div {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .optic-nav-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .optic-nav-actions a:first-child {
+    display: none;
+  }
+
+  .optic-hero-copy h1,
+  section h2 {
+    font-size: 38px !important;
+  }
+
+  .optic-hero-copy h1 {
+    max-width: 360px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .optic-mobile-only {
+    display: block;
+  }
+
+  .optic-desktop-space {
+    display: none;
+  }
+
+  .optic-nav-actions {
+    margin-left: 0 !important;
+  }
+
+  [data-optic-variant] {
+    min-width: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 360px) {
+  .optic-hero-copy h1,
+  section h2 {
+    font-size: 34px !important;
+  }
+}
