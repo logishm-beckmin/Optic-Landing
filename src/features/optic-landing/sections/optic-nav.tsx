@@ -6,7 +6,12 @@ interface OpticNavProps {
   readonly tokens: OpticTokens
 }
 
-const NAV_LINKS = ['기능', '제품', '연동', '사례', '문서'] as const
+const NAV_LINKS = [
+  { label: '기능', anchor: 'features' },
+  { label: '제품', anchor: 'products' },
+  { label: '운영 흐름', anchor: 'flow' },
+  { label: '도입 성과', anchor: 'metrics' },
+] as const
 
 export function OpticNav({ tokens: t }: OpticNavProps) {
   const navBg =
@@ -47,10 +52,10 @@ export function OpticNav({ tokens: t }: OpticNavProps) {
           </span>
         </div>
         <nav style={{ display: 'flex', gap: 32 }}>
-          {NAV_LINKS.map((label) => (
+          {NAV_LINKS.map(({ label, anchor }) => (
             <a
-              key={label}
-              href={`#${label}`}
+              key={anchor}
+              href={`#${anchor}`}
               style={{ fontSize: 13, color: t.ink2, fontWeight: 500 }}
             >
               {label}

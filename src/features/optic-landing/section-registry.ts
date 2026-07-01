@@ -1,6 +1,6 @@
 export const OPTIC_SECTION_REGISTRY = [
   { id: 'nav', label: 'Navigation', source: 'sections/optic-nav.tsx' },
-  { id: 'hero', label: 'Hero with live demo', source: 'sections/optic-hero.tsx' },
+  { id: 'demo', label: 'Hero with live demo', source: 'sections/optic-hero.tsx' },
   { id: 'problems', label: '현장의 문제', source: 'sections/optic-problems.tsx' },
   { id: 'flow', label: '운영 흐름', source: 'sections/optic-flow.tsx' },
   { id: 'features', label: '핵심 기능', source: 'sections/optic-features.tsx' },
