@@ -44,7 +44,11 @@ export function OpticNav({ tokens: t }: OpticNavProps) {
           justifyContent: 'space-between',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <a
+          href="#demo"
+          aria-label="OPTIC — 맨 위로"
+          style={{ display: 'flex', alignItems: 'center', gap: 8 }}
+        >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="12" r="9" stroke={t.ink} strokeWidth="2" />
             <circle cx="12" cy="12" r="3" fill={t.ink} />
@@ -52,7 +56,7 @@ export function OpticNav({ tokens: t }: OpticNavProps) {
           <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: '-0.02em' }}>
             OPTIC
           </span>
-        </div>
+        </a>
         <nav style={{ display: 'flex', gap: 32 }}>
           {NAV_LINKS.map(({ label, anchor }) => (
             <a
