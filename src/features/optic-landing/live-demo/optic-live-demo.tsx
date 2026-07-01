@@ -93,10 +93,10 @@ const CLOSED_ORDERS = [
 
 function phasesFor(theme: LiveDemoTheme) {
   return [
-    { num: '01', label: 'AI 오더 추출', sub: '주문서 → 필드 자동', color: theme.accent, dur: 10000 },
-    { num: '02', label: '화물맨 자동 연동', sub: '배차 → 운송', color: theme.blue, dur: 5000 },
-    { num: '03', label: '그룹 정산', sub: '마감 오더 → 정산 묶음', color: theme.warm, dur: 5500 },
-    { num: '04', label: '세금계산서 발행', sub: '정산 → 증빙', color: theme.green, dur: 4500 },
+    { num: '01', label: '오더 접수 (AI 오더 추출)', sub: '주문서·메일 → 8개 필드 자동', color: theme.accent, dur: 10000 },
+    { num: '02', label: '배차 (화물맨 연동)', sub: '차주 확정 → 화물맨 자동 등록', color: theme.blue, dur: 5000 },
+    { num: '03', label: '정산', sub: '동일 화주 마감 오더 묶음', color: theme.warm, dur: 5500 },
+    { num: '04', label: '증빙', sub: '전자세금계산서 자동 발행', color: theme.green, dur: 4500 },
   ] as const
 }
 

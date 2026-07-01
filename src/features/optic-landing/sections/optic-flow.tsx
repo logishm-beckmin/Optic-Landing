@@ -7,19 +7,19 @@ interface OpticFlowProps {
 }
 
 const FLOW_STAGES = [
-  { x: 100, label: '오더 접수', sub: '주문서·이메일', colorKey: 'accent' as const },
-  { x: 340, label: 'AI 추출', sub: '5개 필드', colorKey: 'accent' as const },
-  { x: 580, label: '배차', sub: '차주 매칭', colorKey: 'blue' as const },
-  { x: 820, label: '운송', sub: '화물맨 연동', colorKey: 'blue' as const },
-  { x: 1100, label: '정산·증빙', sub: '세금계산서', colorKey: 'green' as const },
+  { x: 100, label: '화주 오더 요청', sub: '주문서·메일·전화', colorKey: 'accent' as const },
+  { x: 340, label: '주선사 오더 접수', sub: 'AI 오더 추출', colorKey: 'accent' as const },
+  { x: 580, label: '배차', sub: '차주 매칭 / 화물맨', colorKey: 'blue' as const },
+  { x: 820, label: '정산', sub: '그룹 정산', colorKey: 'warm' as const },
+  { x: 1100, label: '증빙', sub: '세금계산서', colorKey: 'green' as const },
 ] as const
 
 const FLOW_DETAILS = [
-  { h: '오더 접수', b: '주문서 텍스트, 엑셀, 이메일을 그대로.' },
-  { h: 'AI 추출', b: '회사별 양식 학습. 5개 필드 자동 정리.' },
-  { h: '배차', b: '차주 매칭과 운송사 정보 통합.' },
-  { h: '운송', b: '화물맨에 정보 자동 전송. 중복 입력 0.' },
-  { h: '정산·증빙', b: '세금계산서 발행 상태까지 한 흐름.' },
+  { h: '화주 오더 요청', b: '화주가 보낸 주문서·메일·전화 요청을 그대로 접수.' },
+  { h: '주선사 오더 접수', b: '회사별 양식을 학습한 AI가 8개 필드를 자동 정리.' },
+  { h: '배차', b: '자체 차주 매칭 또는 화물맨 연동 중 선택해 배차.' },
+  { h: '정산', b: '동일 화주의 마감 오더를 묶어 한 번에 정산.' },
+  { h: '증빙', b: '전자세금계산서 발행·국세청 전송까지 자동.' },
 ] as const
 
 export function OpticFlow({ tokens: t }: OpticFlowProps) {
@@ -134,8 +134,8 @@ export function OpticFlow({ tokens: t }: OpticFlowProps) {
             })}
 
             <g>
-              <line x1="220" y1="220" x2="220" y2="240" stroke={t.mute2} strokeWidth="1" strokeDasharray="2 2" />
-              <text x="220" y="260" textAnchor="middle" fontSize="11" fill={t.warm} fontFamily="ui-monospace, monospace">
+              <line x1="340" y1="220" x2="340" y2="240" stroke={t.mute2} strokeWidth="1" strokeDasharray="2 2" />
+              <text x="340" y="260" textAnchor="middle" fontSize="11" fill={t.warm} fontFamily="ui-monospace, monospace">
                 10초 내외
               </text>
             </g>
