@@ -1,5 +1,6 @@
 ﻿'use client'
 
+import { ContactPopover } from '../contact-popover'
 import type { OpticTokens } from '../theme/optic-tokens'
 
 interface OpticNavProps {
@@ -7,10 +8,11 @@ interface OpticNavProps {
 }
 
 const NAV_LINKS = [
+  { label: '문제', anchor: 'problems' },
+  { label: '운영 흐름', anchor: 'flow' },
   { label: '기능', anchor: 'features' },
   { label: '제품', anchor: 'products' },
-  { label: '운영 흐름', anchor: 'flow' },
-  { label: '도입 성과', anchor: 'metrics' },
+  { label: '성과', anchor: 'metrics' },
 ] as const
 
 export function OpticNav({ tokens: t }: OpticNavProps) {
@@ -66,19 +68,7 @@ export function OpticNav({ tokens: t }: OpticNavProps) {
           <a href="#login" style={{ fontSize: 13, color: t.mute, fontWeight: 500 }}>
             로그인
           </a>
-          <a
-            href="#contact"
-            style={{
-              fontSize: 13,
-              fontWeight: 600,
-              color: t.surface,
-              background: t.ink,
-              padding: '8px 16px',
-              borderRadius: 999,
-            }}
-          >
-            도입 문의
-          </a>
+          <ContactPopover tokens={t} />
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import {
   LIGHT_LIVE_DEMO,
   OpticLiveDemo,
 } from '../live-demo/optic-live-demo'
+import { ContactPopover } from '../contact-popover'
 import type { OpticTokens, OpticVariant } from '../theme/optic-tokens'
 
 interface OpticHeroProps {
@@ -109,9 +110,11 @@ export function OpticHero({ tokens: t, variant }: OpticHeroProps) {
           </p>
 
           <div style={{ display: 'inline-flex', gap: 12, alignItems: 'center' }}>
-            <a
-              href="#contact"
-              style={{
+            <ContactPopover
+              tokens={t}
+              label="도입 문의하기"
+              align="left"
+              triggerStyle={{
                 fontSize: 14,
                 fontWeight: 600,
                 color: variant === 'd' ? t.bg : t.surface,
@@ -119,9 +122,7 @@ export function OpticHero({ tokens: t, variant }: OpticHeroProps) {
                 padding: '12px 22px',
                 borderRadius: 999,
               }}
-            >
-              도입 문의하기
-            </a>
+            />
             <a
               href="https://mm-broker-test.vercel.app/login"
               target="_blank"

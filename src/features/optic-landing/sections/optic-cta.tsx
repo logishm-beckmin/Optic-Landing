@@ -1,5 +1,6 @@
 ﻿'use client'
 
+import { ContactPopover } from '../contact-popover'
 import type { OpticTokens } from '../theme/optic-tokens'
 
 interface OpticCtaProps {
@@ -83,10 +84,12 @@ export function OpticCta({ tokens: t }: OpticCtaProps) {
           >
             데모 → 데이터 마이그레이션 → 사용 시작까지 함께 안내합니다.
           </p>
-          <div style={{ display: 'inline-flex', gap: 12 }}>
-            <a
-              href="#contact-form"
-              style={{
+          <div style={{ display: 'inline-flex', gap: 12, alignItems: 'center' }}>
+            <ContactPopover
+              tokens={t}
+              label="도입 문의하기 →"
+              align="left"
+              triggerStyle={{
                 fontSize: 15,
                 fontWeight: 600,
                 color: t.ctaBg,
@@ -94,9 +97,7 @@ export function OpticCta({ tokens: t }: OpticCtaProps) {
                 padding: '13px 22px',
                 borderRadius: 999,
               }}
-            >
-              도입 문의하기 →
-            </a>
+            />
             <a
               href="#demo"
               style={{
