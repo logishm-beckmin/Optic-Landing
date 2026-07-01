@@ -45,7 +45,7 @@ export function VariantSwitcher({ current }: VariantSwitcherProps) {
           fontWeight: 600,
         }}
       >
-        C · light
+        light
       </Link>
       <Link
         href="/?variant=d"
@@ -61,7 +61,7 @@ export function VariantSwitcher({ current }: VariantSwitcherProps) {
           fontWeight: 600,
         }}
       >
-        D · dark
+        dark
       </Link>
     </div>
   )
