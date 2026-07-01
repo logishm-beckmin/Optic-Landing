@@ -123,19 +123,6 @@ export function OpticHero({ tokens: t, variant }: OpticHeroProps) {
                 borderRadius: 999,
               }}
             />
-            <a
-              href="https://mm-broker-test.vercel.app/login"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                fontSize: 14,
-                fontWeight: 500,
-                color: t.ink,
-                padding: '12px 18px',
-              }}
-            >
-              서비스 로그인하기 ↗
-            </a>
           </div>
         </div>
 

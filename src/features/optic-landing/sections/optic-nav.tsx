@@ -65,9 +65,6 @@ export function OpticNav({ tokens: t }: OpticNavProps) {
           ))}
         </nav>
         <div className="optic-nav-actions" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <a href="#login" style={{ fontSize: 13, color: t.mute, fontWeight: 500 }}>
-            로그인
-          </a>
           <ContactPopover tokens={t} />
         </div>
       </div>

@@ -276,10 +276,6 @@ select {
     padding-right: 16px !important;
   }
 
-  .optic-nav-actions a:first-child {
-    display: none;
-  }
-
   .optic-hero-copy h1,
   section h2 {
     font-size: 38px !important;
